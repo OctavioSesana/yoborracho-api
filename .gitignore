@@ -1,0 +1,36 @@
+# Dependencias
+node_modules/
+backend/node_modules/
+yoborracho/node_modules/
+
+# Builds
+dist/
+dist-ssr/
+backend/dist/
+yoborracho/dist/
+
+# Variables de entorno (contienen secretos y API keys reales)
+.env
+.env.*
+!.env.example
+backend/.env
+yoborracho/.env
+APIS keys.txt
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor / SO
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose.override.yml
+
+# Notas internas / archivos de scratch, no forman parte del proyecto público
+Faltantes.txt
+yoborracho/_mount_test.txt
