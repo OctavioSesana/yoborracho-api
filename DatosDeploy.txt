@@ -1,1 +1,4 @@
 INTERNAL DATABASE URL DE POSTGRESS: postgresql://yoborracho_db_user:5oHABk8II4Jx3DhPbTGKPK5jJUtrxMcx@dpg-d9afcmok1i2s73fidpdg-a/yoborracho_db
+
+EXTERNAL DATABASE URL DE POSTGRESS:
+postgresql://yoborracho_db_user:5oHABk8II4Jx3DhPbTGKPK5jJUtrxMcx@dpg-d9afcmok1i2s73fidpdg-a.oregon-postgres.render.com/yoborracho_db

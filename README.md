@@ -8,7 +8,7 @@ Resuelve el problema que ni Uber ni Cabify resuelven: volver a tu casa después 
 
 ## Demo
 
-- **Demo en vivo:** _(pendiente de despliegue)_
+- **Demo en vivo:** [yoborracho-api-frontend.onrender.com](https://yoborracho-api-frontend.onrender.com/)
 - **Video / capturas del flujo:** _(pendiente — agregar acá un GIF corto del flujo pedido → viaje → llegada)_
 
 Usuarios de prueba (cargados por el seed):
@@ -17,6 +17,8 @@ Usuarios de prueba (cargados por el seed):
 |-----------------|------------|-----------|
 | sofia@test.com  | 123        | usuario   |
 | martin@test.com | 123        | conductor |
+
+> El backend está en el plan Free de Render, así que se "duerme" a los 15 minutos sin uso — la primera carga después de un rato inactivo puede tardar ~1 minuto en responder. Para probar el flujo completo (pedir un viaje y que el conductor lo acepte) hacen falta dos sesiones a la vez, una por rol — ver la sección de abajo.
 
 ## El problema y la propuesta de valor
 
