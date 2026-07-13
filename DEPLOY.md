@@ -47,21 +47,21 @@ git push -u origin main
 
 1. **New +** → **Web Service** → conectá el repo de GitHub.
 2. **Root Directory:** `backend`
-3. **Runtime:** Node
-4. **Build Command:** `npm install`
-5. **Start Command:** `npm run migrate && npm start`
-6. **Plan:** Free
-7. Variables de entorno (**Environment** → Add Environment Variable):
+3. Render va a detectar el `Dockerfile` de esa carpeta solo y va a mostrar **Runtime: Docker** — dejalo así. Cuando el runtime es Docker, los campos "Build Command" y "Start Command" de la UI **no se usan** (Render corre el `CMD` del Dockerfile directo), así que no hace falta tocarlos — el `CMD` ya corre `npm run migrate && npm start` en ese orden.
+4. **Plan:** Free
+5. Variables de entorno (**Environment** → Add Environment Variable):
 
 | Variable | Valor |
 |---|---|
 | `DATABASE_URL` | la Internal Database URL del Paso 1 |
-| `DATABASE_SSL` | `true` |
+| `DATABASE_SSL` | `false` si usaste la Internal Database URL (la red interna de Render no exige SSL); `true` si en cambio usaste la External |
 | `JWT_SECRET` | generá uno nuevo — `node -e "console.log(require('crypto').randomBytes(48).toString('hex'))"` — **no reutilices el de tu `.env` local** |
 | `JWT_EXPIRES_IN` | `7d` |
 | `NODE_ENV` | `production` |
 | `CORS_ORIGIN` | dejalo vacío por ahora, lo completás en el Paso 4 |
 | `REGRESO_RECORDATORIO_MS` | `180000` (o el valor que prefieras) |
+
+Si en algún momento cambiás el backend para que Render lo buildee sin Docker (por ejemplo, borrando el Dockerfile), ahí sí volvés a necesitar completar Build Command (`npm install`) y Start Command (`npm run migrate && npm start`) en la UI.
 
 8. Deploy. Cuando termine, copiá la URL que te asigna Render (algo como `https://yoborracho-backend.onrender.com`).
 9. Corré el seed una sola vez: en la pestaña **Shell** del servicio, ejecutá `npm run seed`.
