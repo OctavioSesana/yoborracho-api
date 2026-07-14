@@ -11,6 +11,10 @@ html, body, #root {
   margin: 0;
   padding: 0;
   background-color: #0A0A0B;
+  /* Red de seguridad: nada debería desbordar horizontalmente, pero si algún
+     componente se pasa de ancho en una pantalla angosta, esto evita que
+     aparezca scroll horizontal en vez de romper el layout. */
+  overflow-x: hidden;
 }
 
 body {

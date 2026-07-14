@@ -16,7 +16,7 @@ export default function DriverTripAlerts() {
   if (!isDriver || alerts.length === 0) return null
 
   return (
-    <div className="absolute top-4 left-4 right-4 z-50 flex flex-col gap-2 pointer-events-none">
+    <div className="absolute top-[max(1rem,env(safe-area-inset-top))] left-4 right-4 z-50 flex flex-col gap-2 pointer-events-none">
       {alerts.slice(-3).map((a) => (
         <div
           key={a.key}

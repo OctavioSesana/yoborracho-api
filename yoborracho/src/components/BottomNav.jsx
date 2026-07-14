@@ -20,7 +20,7 @@ export default function BottomNav() {
   const { isDriver } = useAuth()
   const tabs = isDriver ? driverTabs : userTabs
   return (
-    <div className="sticky bottom-0 z-10 border-t border-subtle bg-surface/95 backdrop-blur flex justify-around py-2 px-1">
+    <div className="sticky bottom-0 z-10 border-t border-subtle bg-surface/95 backdrop-blur flex justify-around pt-2 px-1 pb-[max(0.5rem,env(safe-area-inset-bottom))]">
       {tabs.map(({ to, label, Icon }) => (
         <NavLink
           key={to}
